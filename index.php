@@ -154,16 +154,28 @@
 						<form method="post">
 							<table border="0" width="700px" height="500px">
 								<tr>
-									<td align="left"> <input type="text" class="text" value=" Name" name="t1" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = 'Your Name';}" title"Please Enter Only Characters and numbers between 1 to 50 for Name"></td>
+									<td align="left" style="display:flex; flex-direction: column;">
+										<label style="padding-left: 40px;" for="t1">Name</label>
+										<input type="text" class="text" name="t1" title"Please Enter Only Characters and numbers between 1 to 50 for Name">
+									</td>
 								</tr>
 								<tr>
-									<td align="left"><input type="text" class="text" value=" Contact No" name="t2" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = 'Your Contact NO';}" required pattern="[0-9]{10,12}" title"Please Enter Only numbers between 10 to 12 for Contact no"></td>
+									<td align="left" style="display:flex; flex-direction: column;">
+										<label style="padding-left: 40px; padding-top:10px" for="t2">Contact number</label>
+										<input type="text" class="text" name="t2" required pattern="[0-9]{10,12}" title"Please Enter Only numbers between 10 to 12 for Contact no">
+									</td>
 								</tr>
 								<tr>
-									<td align="left"> <input type="text" class="text" value="Email" name="t3" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = 'Your mail';}" required></td>
+									<td align="left" style="display:flex; flex-direction: column;">
+										<label style="padding-left: 40px; padding-top:10px" for="t3">Email</label>
+										<input type="text" class="text" name="t3" required>
+									</td>
 								</tr>
 								<tr>
-									<td><textarea class="text" onFocus="this.value = '';" name="t4" onBlur="if(this.value == '') this.value='Enter Message Here';" required />Message</textarea></td>
+									<td align="left" style="display:flex; flex-direction:column;">
+										<label style="padding-left: 40px; padding-top:10px" for="t4">Message</label>
+										<textarea class="text" name="t4" required /></textarea>
+									</td>
 								</tr>
 								<tr>
 									<td><input type="submit" value="Send message" name="sbmt"></td>

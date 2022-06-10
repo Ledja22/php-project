@@ -117,9 +117,7 @@
 					</td>
 				</tr>
 			</table>
-
 		</div>
-
 	</div>
 
 	<div style="clear:both"></div>
