@@ -53,76 +53,75 @@
 	?>
 	<!--/sticky-->
 	<div style="padding-top:100px; box-shadow:1px 1px 20px black; min-height:100vh" class="container">
-		<div style="border-right:1px solid #999; min-height:450px;" <?php include('left.php'); ?> /div>
-			<div>
-				<form method="post" enctype="multipart/form-data">
-					<table border="0" width="400px" height="250px" align="center" class="tableshadow" style="border-color: darkgray;">
-						<tr>
-							<td colspan="2" class="toptd" style="background-color: dimgray; ">Delete Subcategory</td>
-						</tr>
-						<tr>
-							<td class="lefttxt" style="color: dimgray; ">Select Category</td>
-							<td><select name="t2" required />
-								<option value="">Select</option>
+		<div style="border-right:1px solid #999; min-height:450px;" <?php include('left.php'); ?> </div>
+			<form method="post" enctype="multipart/form-data">
+				<table border="0" width="400px" height="250px" align="center" class="tableshadow" style="border-color: darkgray;">
+					<tr>
+						<td colspan="2" class="toptd" style="background-color: dimgray; ">Delete Subcategory</td>
+					</tr>
+					<tr>
+						<td class="lefttxt" style="color: dimgray; ">Select Category</td>
+						<td><select name="t2" required />
+							<option value="">Select</option>
 
-								<?php
+							<?php
+							$cn = makeconnection();
+							$s = "select * from category";
+							$result = mysqli_query($cn, $s);
+							$r = mysqli_num_rows($result);
+							//echo $r;
+
+							while ($data = mysqli_fetch_array($result)) {
+								if (isset($_POST["show"]) && $data[0] == $_POST["t2"]) {
+									echo "<option value=$data[0] selected>$data[1]</option>";
+								} else {
+									echo "<option value=$data[0]>$data[1]</option>";
+								}
+							}
+							mysqli_close($cn);
+							?>
+							</select>
+							<input type="submit" value="Show" name="show" formnovalidate />
+
+					<tr>
+						<td class="lefttxt" style="color: dimgray; ">Select Subcategory</td>
+						<td><select name="s1" required />
+							<option value="">Select</option>
+
+							<?php
+							if (isset($_POST["show"])) {
+
 								$cn = makeconnection();
-								$s = "select * from category";
+								$s = "select * from subcategory where catid='" . $_POST["t2"] . "'";
 								$result = mysqli_query($cn, $s);
 								$r = mysqli_num_rows($result);
 								//echo $r;
 
 								while ($data = mysqli_fetch_array($result)) {
-									if (isset($_POST["show"]) && $data[0] == $_POST["t2"]) {
-										echo "<option value=$data[0] selected>$data[1]</option>";
-									} else {
-										echo "<option value=$data[0]>$data[1]</option>";
-									}
+
+
+									echo "<option value=$data[0]>$data[1]</option>";
 								}
 								mysqli_close($cn);
-								?>
-								</select>
-								<input type="submit" value="Show" name="show" formnovalidate />
+							}
+							?>
 
-						<tr>
-							<td class="lefttxt" style="color: dimgray; ">Select Subcategory</td>
-							<td><select name="s1" required />
-								<option value="">Select</option>
+							</select>
 
-								<?php
-								if (isset($_POST["show"])) {
+						</td>
+					</tr>
 
-									$cn = makeconnection();
-									$s = "select * from subcategory where catid='" . $_POST["t2"] . "'";
-									$result = mysqli_query($cn, $s);
-									$r = mysqli_num_rows($result);
-									//echo $r;
+					<tr>
+						<td>&nbsp;</td>
+						<td><input type="submit" value="Delete" name="sbmt" class="btn btn-primary btn-sm" /></td>
+					</tr>
 
-									while ($data = mysqli_fetch_array($result)) {
-
-
-										echo "<option value=$data[0]>$data[1]</option>";
-									}
-									mysqli_close($cn);
-								}
-								?>
-
-								</select>
-
-							</td>
-						</tr>
-
-						<tr>
-							<td>&nbsp;</td>
-							<td><input type="submit" value="Delete" name="sbmt" class="btn btn-primary btn-sm" /></td>
-						</tr>
-
-					</table>
-				</form>
-
-			</div>
+				</table>
+			</form>
 
 		</div>
+
+	</div>
 
 </body>
 
