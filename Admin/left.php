@@ -191,18 +191,13 @@
                 </a>
             </div>
             <ul class="nav navbar-right top-nav">
-                <li><a href="#" data-placement="bottom" data-toggle="tooltip" href="#" data-original-title="Stats"><i class="fa fa-bar-chart-o"></i>
+                <li><a href="index.php" data-placement="bottom" data-toggle="tooltip" href="#" data-original-title="Stats"><i class="fa fa-bar-chart-o"></i>
                     </a>
                 </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Admin User <b class="fa fa-angle-down"></b></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#"><i class="fa fa-fw fa-user"></i> Edit Profile</a></li>
-                        <li><a href="#"><i class="fa fa-fw fa-cog"></i> Change Password</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#"><i class="fa fa-fw fa-power-off"></i> Logout</a></li>
-                    </ul>
-                </li>
+                <li><a href="updateuser.php"><i class="fa fa-fw fa-user"></i> Edit Profile</a></li>
+                <li><a href="updateuser.php"><i class="fa fa-fw fa-cog"></i> Change Password</a></li>
+                <li class="divider"></li>
+                <li><a href="../index.php"><i class="fa fa-fw fa-power-off"></i> Logout</a></li>
             </ul>
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">

@@ -55,13 +55,6 @@
 			<div class="top-tours-head text-center">
 				<h3>Gallery</h3>
 			</div>
-			<ul id="filters" class="clearfix wow bounceIn" data-wow-delay="0.4s">
-				<li><span class="filter active" data-filter="app card icon logo fun">ALL</span></li>
-				<li><span class="filter" data-filter="app">Domestic Travel</span></li>
-				<li><span class="filter" data-filter="card">Foreign Travel</span></li>
-				<li><span class="filter" data-filter="icon">Short Date Tour</span></li>
-				<li><span class="filter" data-filter="fun">Long Date Tour</span></li>
-			</ul>
 			<div id="portfoliolist">
 				<div class="portfolio card mix_all" data-cat="card" style="display: inline-block; opacity: 1;">
 					<div class="portfolio-wrapper wow bounceIn" data-wow-delay="0.4s">
@@ -146,9 +139,9 @@
 						if (isset($_POST["sbmt"])) {
 							$cn = makeconnection();
 							$s = "insert into contactus(Name,Phno,Email,Message) values('" . $_POST["t1"] . "','" . $_POST["t2"] . "','" . $_POST["t3"] . "','" . $_POST["t4"] . "')";
+							echo "<script>alert('Contact saved');</script>";
 							mysqli_query($cn, $s);
 							mysqli_close($cn);
-							echo "<script type='text/javascript'>toastr.success('Record saved ')</script>";
 						}
 						?>
 						<form method="post">
@@ -187,9 +180,6 @@
 					<div class="clearfix"></div>
 				</div>
 			</div>
-
-
-
 
 			<?php include('bottom.php'); ?>
 </body>
