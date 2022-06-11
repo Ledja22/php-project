@@ -48,7 +48,7 @@
 		$s = "update category set Cat_name='" . $_POST["t2"] . "' where Cat_id='" . $_POST["t1"] . "'";
 		mysqli_query($cn, $s);
 		mysqli_close($cn);
-		echo "<script>alert('Record Update');</script>";
+		echo "<script type='text/javascript'>toastr.success('Category updated')</script>";
 	}
 	?>
 

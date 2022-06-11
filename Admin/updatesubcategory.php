@@ -70,7 +70,7 @@
 		}
 		mysqli_query($cn, $s);
 		mysqli_close($cn);
-		echo "<script>alert('Record Update');</script>";
+		echo "<script type='text/javascript'>toastr.success('Subcategory updated')</script>";
 	}
 	?>
 	<!--/sticky-->

@@ -14,9 +14,6 @@
 	<link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-
-
-
 	<script type="application/x-javascript">
 		addEventListener("load", function() {
 			setTimeout(hideURLbar, 0);
@@ -41,11 +38,7 @@
 	}
 	?>
 
-
 	<?php include('function.php'); ?>
-
-
-
 
 	<?php
 	if (isset($_POST["sbmt"])) {
@@ -53,7 +46,7 @@
 		$s = "delete from package  where packid='" . $_POST["t1"] . "'";
 		mysqli_query($cn, $s);
 		mysqli_close($cn);
-		echo "<script>alert('Record Delete');</script>";
+		echo "<script type='text/javascript'>toastr.success('Package deleted')</script>";
 	}
 	?>
 

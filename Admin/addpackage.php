@@ -269,7 +269,7 @@
 		$s = "insert into package(packname,category,subcategory,packprice,pic1,pic2,pic3,detail) values('" . $_POST["t1"] . "','" . $_POST["t2"] . "','" . $_POST["t3"] . "','" . $_POST["t8"] . "','" . $file4 . "','" . $file5 . "','" . $file6 . "','" . $_POST["t7"] . "')";
 		mysqli_query($cn, $s);
 		mysqli_close($cn);
-		echo "<script>alert('Record Save');</script>";
+		echo "<script type='text/javascript'>toastr.success('Package added! ')</script>";
 	}
 	// }
 	?>

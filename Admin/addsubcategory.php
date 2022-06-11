@@ -126,8 +126,7 @@
 
 				$s = "insert into subcategory(Subcatname,Catid,pic,detail) values('" . $_POST["t1"] . "','" . $_POST["t2"] . "','" . basename($_FILES["t3"]["name"]) . "','" . $_POST["t4"] . "')";
 				mysqli_query($cn, $s);
-
-				echo "<script>alert('Record Save');</script>";
+				echo "<script type='text/javascript'>toastr.success('Subcategory added')</script>";
 			} else {
 				echo "sorry there was an error uploading your file.";
 			}

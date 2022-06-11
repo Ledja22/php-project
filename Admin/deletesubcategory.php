@@ -47,7 +47,7 @@
 		$s = "delete from subcategory  where subcatid='" . $_POST["s1"] . "'";
 		mysqli_query($cn, $s);
 		mysqli_close($cn);
-		echo "<script>alert('Record Delete');</script>";
+		echo "<script type='text/javascript'>toastr.success('Subcategory deleted')</script>";
 	}
 	?>
 	<!--/sticky-->

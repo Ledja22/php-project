@@ -14,9 +14,6 @@
 	<link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-
-
-
 	<script type="application/x-javascript">
 		addEventListener("load", function() {
 			setTimeout(hideURLbar, 0);
@@ -48,7 +45,7 @@
 		$s = "delete from users  where Username='" . $_POST["t1"] . "'";
 		mysqli_query($cn, $s);
 		mysqli_close($cn);
-		echo "<script>alert('Record Delete');</script>";
+		echo "<script type='text/javascript'>toastr.success('User deleted')</script>";
 	}
 	?>
 
@@ -58,10 +55,6 @@
 			<?php include('left.php'); ?>
 		</div>
 		<div>
-
-
-
-
 
 			<form method="post">
 				<table border="0" width="400px" height="300px" align="center" style="border-color:dimgray;" class="tableshadow">
@@ -85,8 +78,6 @@
 								echo "<option value=$data[0]>$data[0]</option>";
 							}
 							mysqli_close($cn);
-
-
 
 							?>
 

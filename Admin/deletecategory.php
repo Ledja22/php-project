@@ -45,7 +45,7 @@
 		$s = "delete from category  where Cat_id='" . $_POST["t1"] . "'";
 		mysqli_query($cn, $s);
 		mysqli_close($cn);
-		echo "<script>alert('Record Delete');</script>";
+		echo "<script type='text/javascript'>toastr.success('Category deleted')</script>";
 	}
 	?>
 

@@ -148,11 +148,11 @@
 							$s = "insert into contactus(Name,Phno,Email,Message) values('" . $_POST["t1"] . "','" . $_POST["t2"] . "','" . $_POST["t3"] . "','" . $_POST["t4"] . "')";
 							mysqli_query($cn, $s);
 							mysqli_close($cn);
-							echo "<script>alert('Record Save');</script>";
+							echo "<script type='text/javascript'>toastr.success('Record saved ')</script>";
 						}
 						?>
 						<form method="post">
-							<table border="0" width="700px" height="500px">
+							<table border="0" width="700px">
 								<tr>
 									<td align="left" style="display:flex; flex-direction: column;">
 										<label style="padding-left: 40px;" for="t1">Name</label>
@@ -178,7 +178,7 @@
 									</td>
 								</tr>
 								<tr>
-									<td><input type="submit" value="Send message" name="sbmt"></td>
+									<td><input style="color:blue; background-color:aliceblue;" type="submit" value="Send message" name="sbmt"></td>
 								</tr>
 							</table>
 							<div class="clearfix"></div>

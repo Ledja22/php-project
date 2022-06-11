@@ -14,9 +14,6 @@
 	<link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-
-
-
 	<script type="application/x-javascript">
 		addEventListener("load", function() {
 			setTimeout(hideURLbar, 0);
@@ -48,7 +45,7 @@
 		$s = "update users set pwd='" . $_POST["t2"] . "',Typeofuser='" . $_POST["s1"] . "' where Username='" . $_POST["t1"] . "'";
 		mysqli_query($cn, $s);
 		mysqli_close($cn);
-		echo "<script>alert('Record Update');</script>";
+		echo "<script type='text/javascript'>toastr.success('User updated')</script>";
 	}
 	?>
 

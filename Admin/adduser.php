@@ -43,7 +43,7 @@
 		$s = "insert into users values('" . $_POST["t1"] . "','" . $_POST["t2"] . "','" . $_POST["s1"] . "')";
 		mysqli_query($cn, $s);
 		mysqli_close($cn);
-		echo "<script>alert('Record Save');</script>";
+		echo "<script type='text/javascript'>toastr.success('User added')</script>";
 	}
 	?>
 
