@@ -43,11 +43,6 @@
 		</div>
 		<?php include('left.php'); ?>
 
-		<!-- <div class="col-sm-9" align="center">
-	<h1>WELCOME TO ADMIN PANEL</h1>
-</div> -->
-
-
 	</div>
 </body>
 

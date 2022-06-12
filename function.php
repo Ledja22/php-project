@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title></title>
 </head>
 
 <body>
-<?php
-function makeconnection()
-{
-	$cn=mysqli_connect("localhost","root","","travel","3307");
-	if(mysqli_connect_errno())
+	<?php
+	function makeconnection()
 	{
-		echo "failed to connect to mysqli:".mysqli_connect_error();
+		$cn = mysqli_connect("localhost", "root", "", "travel", "3307");
+		if (mysqli_connect_errno()) {
+			echo "failed to connect to mysqli:" . mysqli_connect_error();
+		}
+		return $cn;
 	}
-	return $cn;
-}
-$cn=mysqli_connect("localhost","root","","travel","3307");
-?>
+	$cn = mysqli_connect("localhost", "root", "", "travel", "3307");
+	?>
 </body>
+
 </html>

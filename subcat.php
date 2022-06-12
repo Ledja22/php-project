@@ -113,9 +113,7 @@
 								}
 								mysqli_close($cn);
 							?>
-
 						</table>
-
 					</td>
 				</tr>
 			</table>

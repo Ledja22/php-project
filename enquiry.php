@@ -65,7 +65,6 @@
 				?>
 
 			</table>
-
 		</div>
 
 		<div style="width:800px; float:left">

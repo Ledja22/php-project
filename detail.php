@@ -82,7 +82,6 @@
                     mysqli_close($cn);
                     ?>
 
-
                     <tr>
                       <td colspan="3"><span class="middletext">Pack Name:</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $data[1]; ?></td>
                     </tr>

@@ -68,7 +68,6 @@
 									<td style="font-size:15px; padding:5px; font-weight:bold;">Status Field</td>
 								</tr>
 
-
 								<?php
 
 								$s = "select * from enquiry,package where enquiry.Packageid=package.Packid";
