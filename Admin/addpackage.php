@@ -7,6 +7,9 @@
 
 <head>
 	<title></title>
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
 	<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet" />
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
@@ -148,31 +151,31 @@
 			//check if image file is a actual image or fake image
 			$check = getimagesize($_FILES["t4"]["tmp_name"]);
 			if ($check === false) {
-				echo "File is not an image.";
+				echo "<script type='text/javascript'>toastr.success('File is not an image! ')</script>";
 				$uploadok = 0;
 			}
 
 			//check if file already exists
 			if (file_exists($target_file)) {
-				echo "Sorry,file already exists.";
+				echo "<script type='text/javascript'>toastr.success('File already exists! ')</script>";
 				$uploadok = 0;
 			}
 
 			//check file size
 			if ($_FILES["t4"]["size"] > 500000) {
-				echo "Sorry, your file is too large.";
+				echo "<script type='text/javascript'>toastr.success('Your file is too large! ')</script>";
 				$uploadok = 0;
 			}
 
 			//aloow certain file formats
 			if ($imagefiletype != "jpg" && $imagefiletype != "png" && $imagefiletype != "jpeg" && $imagefileype != "gif") {
-				echo "Sorry, only jpg, jpeg, png & gif files are allowed.";
+				echo "<script type='text/javascript'>toastr.success('Sorry, only jpg, jpeg, png & gif files are allowed! ')</script>";
 				$uploadok = 0;
 			} else {
 				if (move_uploaded_file($_FILES["t4"]["tmp_name"], $target_file)) {
 					$f1 = 1;
 				} else {
-					echo "Sorry, there was an error uploading your file.";
+					echo "<script type='text/javascript'>toastr.success('Sorry, there was an error uploading your file! ')</script>";
 				}
 			}
 		}
@@ -185,32 +188,32 @@
 			//check if image file is a actual image or fake image
 			$check = getimagesize($_FILES["t5"]["tmp_name"]);
 			if ($check === false) {
-				echo "File is not an image.";
+				echo "<script type='text/javascript'>toastr.success('File is not an image! ')</script>";
 				$uploadok = 0;
 			}
 
 			//check if file already exists
 			if (file_exists($target_file)) {
-				echo "Sorry,file already exists.";
+				echo "<script type='text/javascript'>toastr.success('Sorry,file already exists! ')</script>";
 				$uploadok = 0;
 			}
 
 			//check file size
 			if ($_FILES["t5"]["size"] > 500000) {
-				echo "Sorry, your file is too large.";
+				echo "<script type='text/javascript'>toastr.success('Sorry, your file is too large! ')</script>";
 				$uploadok = 0;
 			}
 
 
 			//allow certain file formats
 			if ($imagefiletype != "jpg" && $imagefiletype != "png" && $imagefiletype != "jpeg" && $imagefileype != "gif") {
-				echo "Sorry, only jpg, jpeg, png & gif files are allowed.";
+				echo "<script type='text/javascript'>toastr.success('Sorry, only jpg, jpeg, png & gif files are allowed! ')</script>";
 				$uploadok = 0;
 			} else {
 				if (move_uploaded_file($_FILES["t5"]["tmp_name"], $target_file)) {
 					$f2 = 1;
 				} else {
-					echo "Sorry there was an error uploading your file.";
+					echo "<script type='text/javascript'>toastr.success('Sorry there was an error uploading your file! ')</script>";
 				}
 			}
 		}
@@ -223,32 +226,32 @@
 			//check if image file is a actual image or fake image
 			$check = getimagesize($_FILES["t6"]["tmp_name"]);
 			if ($check === false) {
-				echo "File is not an image.";
+				echo "<script type='text/javascript'>toastr.success('File is not an image! ')</script>";
 				$uploadok = 0;
 			}
 
 			//check if file already exists
 			if (file_exists($target_file)) {
-				echo "Sorry, file already exists.";
+				echo "<script type='text/javascript'>toastr.success('Sorry, file already exists! ')</script>";
 				$uploadok = 0;
 			}
 
 			//check file size
 			if ($_FILES["t6"]["size"] > 500000) {
-				echo "Sorry, your file is too large.";
+				echo "<script type='text/javascript'>toastr.success('Sorry, your file is too large! ')</script>";
 				$uploadok = 0;
 			}
 
 
 			//aloow certain file formats
 			if ($imagefiletype != "jpg" && $imagefiletype != "png" && $imagefiletype != "jpeg" && $imagefileype != "gif") {
-				echo "Sorry, only jpg, jpeg, Png & gif files are allowed.";
+				echo "<script type='text/javascript'>toastr.success('Sorry, only jpg, jpeg, Png & gif files are allowed! ')</script>";
 				$uploadok = 0;
 			} else {
 				if (move_uploaded_file($_FILES["t6"]["tmp_name"], $target_file)) {
 					$f3 = 1;
 				} else {
-					echo "Sorry, there was an error uploading your file.";
+					echo "<script type='text/javascript'>toastr.success('Sorry there was an error uploading your file! ')</script>";
 				}
 			}
 		}

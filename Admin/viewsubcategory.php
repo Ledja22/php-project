@@ -46,7 +46,7 @@
 		$s = "insert into category(Cat_name) values('" . $_POST["t1"] . "')";
 		mysqli_query($cn, $s);
 
-		echo "<script>alert('Record Save');</script>";
+		echo "<script type='text/javascript'>toastr.success('Record saved! ')</script>";
 	}
 	?>
 

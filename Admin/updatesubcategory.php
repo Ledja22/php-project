@@ -7,7 +7,9 @@
 <head>
 	<title></title>
 	<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
-
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
 	<link href="style.css" rel="stylesheet" type="text/css" />
 
 	<link href="../css/bootstrap.css" rel='stylesheet' type='text/css' />
@@ -53,7 +55,7 @@
 
 		if (move_uploaded_file($_FILES["t3"]["tmp_name"], $target_file)) {
 		} else {
-			echo "sorry there was an error uploading your file.";
+			echo "<script type='text/javascript'>toastr.success('Sorry, there was an error uploading your file! ')</script>";
 		}
 	}
 	?>

@@ -14,7 +14,7 @@
 	 					<li><a href="index.php#section-5" onclick="javascript:window.open('index.php#section-5','_self')"> Contact</a></li>
 	 					<li><a href="category.php" onclick="javascript:window.open('category.php','_self')">Category</a></li>
 
-	 					<li><a href="admin/loginform.php" onclick="javascript:window.open('index.php#section-1','_self')"> Admin Login</a></li>
+	 					<li><a href="admin/loginform.php" onclick="javascript:window.open('index.php#section-1','_self')"> Login</a></li>
 	 					<div class="clearfix"></div>
 	 				</ul>
 	 			</div>
