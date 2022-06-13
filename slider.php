@@ -24,7 +24,6 @@
 		</div>
 		<div class="clearfix"> </div>
 	</div>
-	<!---banner--->
 </body>
 
 </html>

@@ -21,7 +21,6 @@
   <!--js-->
   <script src="js/jquery.min.js"></script>
 
-  <!--/js-->
 </head>
 
 <body>
@@ -30,7 +29,6 @@
   <br>
   <br>
   <br>
-  <!--/sticky-->
   <?php include('slider.php'); ?>
   <div style="height:50px"></div>
   <div style="width:1000px; margin:auto">
@@ -46,7 +44,6 @@
         $s = "select * from category";
         $result = mysqli_query($cn, $s);
         $r = mysqli_num_rows($result);
-        //echo $r;
 
         while ($data = mysqli_fetch_array($result)) {
 
@@ -76,7 +73,6 @@
                     $s = "select * from package,category,subcategory where package.category=category.cat_id and package.subcategory=subcategory.subcatid and package.packid='" . $_GET["pid"] . "'";
                     $result = mysqli_query($cn, $s);
                     $r = mysqli_num_rows($result);
-                    //echo $r;
                     $n = 0;
                     $data = mysqli_fetch_array($result);
                     mysqli_close($cn);

@@ -31,12 +31,10 @@
 	<!--js-->
 	<script src="js/jquery.min.js"></script>
 
-	<!--/js-->
 </head>
 
 <body>
 	<!--header-->
-	<!--sticky-->
 	<?php
 	if ($_SESSION['loginstatus'] == "") {
 		header("location:loginform.php");
@@ -45,7 +43,6 @@
 
 	<?php include('function.php'); ?>
 
-	<!--/sticky-->
 	<div style="padding-top:100px; box-shadow:1px 1px 20px black; min-height:100vh" class="container">
 		<div style="border-right:1px solid #999; min-height:450px;">
 			<?php include('left.php'); ?>
@@ -70,7 +67,6 @@
 							$s = "select * from category";
 							$result = mysqli_query($cn, $s);
 							$r = mysqli_num_rows($result);
-							//echo $r;
 
 							while ($data = mysqli_fetch_array($result)) {
 								if (isset($_POST["show"]) && $data[0] == $_POST["t2"]) {
@@ -92,7 +88,6 @@
 							$s = "select * from subcategory";
 							$result = mysqli_query($cn, $s);
 							$r = mysqli_num_rows($result);
-							//echo $r;
 
 							while ($data = mysqli_fetch_array($result)) {
 								if (isset($_POST["show"])) {
@@ -260,7 +255,7 @@
 		$file5 = 'somePath';
 		$file6 = 'somePath';
 
-		// if ($f1 > 0 && $f2 > 0 && $f3 > 0) {
+		// if no photos, for making it easier to test
 		if (basename($_FILES["t4"]["name"]) !== '') {
 			$file4 = basename($_FILES["t4"]["name"]);
 		}
@@ -275,7 +270,6 @@
 		mysqli_close($cn);
 		echo "<script type='text/javascript'>toastr.success('Package added! ')</script>";
 	}
-	// }
 	?>
 
 </body>

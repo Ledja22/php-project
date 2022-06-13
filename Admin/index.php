@@ -22,13 +22,10 @@
 	<!--js-->
 	<script src="js/jquery.min.js"></script>
 
-	<!--/js-->
-
 </head>
 
 <body>
 	<!--header-->
-	<!--sticky-->
 
 	<?php
 	if ($_SESSION['loginstatus'] == "") {
@@ -36,7 +33,6 @@
 	}
 	?>
 
-	<!--/sticky-->
 	<div style="box-shadow:1px 1px 20px black; min-height:100vh; padding-top: 40vh; " class="container h-100 d-flex">
 		<div align="center">
 			<h1>Welcome!</h1>

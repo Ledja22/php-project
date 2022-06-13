@@ -26,12 +26,10 @@
 	<!--js-->
 	<script src="js/jquery.min.js"></script>
 
-	<!--/js-->
 </head>
 
 <body>
 	<!--header-->
-	<!--sticky-->
 	<?php
 	if ($_SESSION['loginstatus'] == "") {
 		header("location:loginform.php");
@@ -48,8 +46,7 @@
 		echo "<script>alert('Record Save');</script>";
 	}
 	?>
-	=
-	<!--/sticky-->
+
 	<div style="padding-top:100px; box-shadow:1px 1px 20px black; min-height:100vh; margin-bottom:10px" class="container">
 		<div style="border-right:1px solid #999; min-height:450px;">
 			<?php include('left.php'); ?>
@@ -79,7 +76,6 @@
 								$s = "select * from package";
 								$result = mysqli_query($cn, $s);
 								$r = mysqli_num_rows($result);
-								//echo $r;
 
 								while ($data = mysqli_fetch_array($result)) {
 

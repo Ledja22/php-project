@@ -28,12 +28,10 @@
 	<!--js-->
 	<script src="js/jquery.min.js"></script>
 
-	<!--/js-->
 </head>
 
 <body>
 	<!--header-->
-	<!--sticky-->
 	<?php
 	if ($_SESSION['loginstatus'] == "") {
 		header("location:loginform.php");

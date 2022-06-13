@@ -21,15 +21,12 @@
 	<!--js-->
 	<script src="js/jquery.min.js"></script>
 
-	<!--/js-->
-
 <body>
 	<?php include('function.php'); ?>
 	<?php
 	if (isset($_POST["sbmt"])) {
 		$cn = makeconnection();
 		$s = "insert into enquiry(Packageid,Name,Gender,Mobileno,Email,NoofDays,Child,Adults,Message,Statusfield) values('" . $_REQUEST["pid"] . "','" . $_POST["t1"] . "','" . $_POST["r1"] . "','" . $_POST["t2"] . "','" . $_POST["t3"] . "','" . $_POST["t4"] . "','" . $_POST["t5"] . "','" . $_POST["t6"] . "','" . $_POST["t7"] . "','Pending')";
-
 
 		mysqli_query($cn, $s);
 
@@ -41,7 +38,6 @@
 	<br>
 	<br>
 	<br>
-	<!--/sticky-->
 	<div style="height:50px"></div>
 	<div style="width:1000px; margin:auto">
 
@@ -56,7 +52,6 @@
 				$s = "select * from category";
 				$result = mysqli_query($cn, $s);
 				$r = mysqli_num_rows($result);
-				//echo $r;
 
 				while ($data = mysqli_fetch_array($result)) {
 
@@ -84,7 +79,6 @@
 
 									$result = mysqli_query($cn, $s);
 									$r = mysqli_num_rows($result);
-									//echo $r;
 									$n = 0;
 									$data = mysqli_fetch_array($result);
 									mysqli_close($cn);
@@ -133,7 +127,6 @@
 											<td>&nbsp;</td>
 											<td><input type="submit" value="Submit" name="sbmt" /></td>
 										</tr>
-
 									</form>
 							</td>
 				</tr>

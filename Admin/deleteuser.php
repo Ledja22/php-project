@@ -30,12 +30,10 @@
 	<!--js-->
 	<script src="js/jquery.min.js"></script>
 
-	<!--/js-->
 </head>
 
 <body>
 	<!--header-->
-	<!--sticky-->
 	<?php
 	if ($_SESSION['loginstatus'] == "") {
 		header("location:loginform.php");
@@ -53,7 +51,6 @@
 	}
 	?>
 
-	<!--/sticky-->
 	<div style="padding-top:200px; box-shadow:1px 1px 20px black; min-height:100vh" class="container">
 		<div style="border-right:1px solid #999; min-height:450px;">
 			<?php include('left.php'); ?>
@@ -75,7 +72,6 @@
 							$s = "select * from users";
 							$result = mysqli_query($cn, $s);
 							$r = mysqli_num_rows($result);
-							//echo $r;
 
 							while ($data = mysqli_fetch_array($result)) {
 
@@ -93,7 +89,6 @@
 								$s = "select * from users where Username='" . $_POST["t1"] . "'";
 								$result = mysqli_query($cn, $s);
 								$r = mysqli_num_rows($result);
-								//echo $r;
 
 								$data = mysqli_fetch_array($result);
 								$Username = $data[0];
@@ -102,7 +97,6 @@
 
 								mysqli_close($cn);
 							}
-
 							?>
 
 						</td>

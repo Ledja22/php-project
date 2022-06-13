@@ -28,12 +28,10 @@
 	<!--js-->
 	<script src="js/jquery.min.js"></script>
 
-	<!--/js-->
 </head>
 
 <body>
 	<!--header-->
-	<!--sticky-->
 	<?php
 	if ($_SESSION['loginstatus'] == "") {
 		header("location:loginform.php");
@@ -52,7 +50,6 @@
 	}
 	?>
 
-	<!--/sticky-->
 	<div style="padding-top:200px; box-shadow:1px 1px 20px black; min-height:100vh" class="container">
 		<div style="border-right:1px solid #999; min-height:450px;">
 			<?php include('left.php'); ?>

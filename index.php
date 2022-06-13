@@ -22,11 +22,10 @@
 
 <body>
 	<!--header-->
-	<!--sticky-->
 	<?php include('function.php'); ?>
 
 	<?php include('top.php'); ?>
-	<!--/sticky-->
+
 	<?php include('slider.php'); ?>
 	<!--About-->
 	<div class="about section" id="section-2">

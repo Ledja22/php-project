@@ -16,9 +16,6 @@
 	<link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-
-
-
 	<script type="application/x-javascript">
 		addEventListener("load", function() {
 			setTimeout(hideURLbar, 0);
@@ -31,18 +28,15 @@
 	<!--js-->
 	<script src="js/jquery.min.js"></script>
 
-	<!--/js-->
 </head>
 
 <body>
 	<!--header-->
-	<!--sticky-->
 	<?php
 	if ($_SESSION['loginstatus'] == "") {
 		header("location:loginform.php");
 	}
 	?>
-
 
 	<?php include('function.php'); ?>
 	<?php
@@ -55,15 +49,11 @@
 	}
 	?>
 
-	<!--/sticky-->
 	<div style="padding-top:200px; box-shadow:1px 1px 20px black; min-height:100vh" class="container">
 		<div style="border-right:1px solid #999; min-height:450px;">
 			<?php include('left.php'); ?>
 		</div>
 		<div>
-
-
-
 
 			<form method="post">
 				<table border="0" width="400px" height="300px" align="center" class="tableshadow" style="border-color:dimgray;">
@@ -83,15 +73,11 @@
 								$s = "select * from category";
 								$result = mysqli_query($cn, $s);
 								$r = mysqli_num_rows($result);
-								//echo $r;
 
 								while ($data = mysqli_fetch_array($result)) {
 
 									echo "<tr><td style=' padding:5px;'>$data[0]</td><td style=' padding:5px;'>$data[1]</td></tr>";
 								}
-
-
-
 
 								?>
 
@@ -102,10 +88,7 @@
 
 			</form>
 
-
-
 		</div>
-
 
 	</div>
 	<?php include('bottom.php'); ?>

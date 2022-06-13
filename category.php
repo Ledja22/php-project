@@ -21,13 +21,11 @@
 	<!--js-->
 	<script src="js/jquery.min.js"></script>
 
-	<!--/js-->
 </head>
 
 <body>
 	<?php include('function.php'); ?>
 	<?php include('top.php'); ?>
-	<!--/sticky-->
 	<br>
 	<br>
 	<br>
@@ -46,7 +44,6 @@
 				$s = "select * from category";
 				$result = mysqli_query($cn, $s);
 				$r = mysqli_num_rows($result);
-				//echo $r;
 
 				while ($data = mysqli_fetch_array($result)) {
 					echo "<tr><td style=' padding:5px;'><b><a href='subcat.php?catid=$data[0]'>$data[1]</a></b></td></tr>";
