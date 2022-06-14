@@ -25,13 +25,11 @@
 			window.scrollTo(0, 1);
 		}
 	</script>
-	<!--js-->
 	<script src="js/jquery.min.js"></script>
 
 </head>
 
 <body>
-	<!--header-->
 	<?php
 	if ($_SESSION['loginstatus'] == "") {
 		header("location:loginform.php");

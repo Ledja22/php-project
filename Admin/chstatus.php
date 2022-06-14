@@ -7,10 +7,8 @@
 </head>
 
 <body>
-
 	<?php include('function.php'); ?>
 	<?php
-
 	$cn = makeconnection();
 	$s = "update enquiry set statusfield='Confirm' where enquiryid='" . $_GET["eid"] . "'";
 	mysqli_query($cn, $s);

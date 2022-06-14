@@ -28,27 +28,21 @@
 			window.scrollTo(0, 1);
 		}
 	</script>
-	<!--js-->
 	<script src="js/jquery.min.js"></script>
-
 </head>
 
 <body>
-	<!--header-->
 	<?php
 	if ($_SESSION['loginstatus'] == "") {
 		header("location:loginform.php");
 	}
 	?>
-
 	<?php include('function.php'); ?>
-
 	<div style="padding-top:100px; box-shadow:1px 1px 20px black; min-height:100vh" class="container">
 		<div style="border-right:1px solid #999; min-height:450px;">
 			<?php include('left.php'); ?>
 		</div>
 		<div>
-
 			<form method="post" enctype="multipart/form-data">
 				<table border="0" width="400px" height="300px" align="center" class="tableshadow" style="border-color: darkgray;">
 					<tr>

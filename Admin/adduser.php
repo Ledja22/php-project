@@ -25,21 +25,16 @@
 			window.scrollTo(0, 1);
 		}
 	</script>
-	<!--js-->
 	<script src="js/jquery.min.js"></script>
-
 </head>
 
 <body>
-	<!--header-->
 	<?php
 	if ($_SESSION['loginstatus'] == "") {
 		header("location:loginform.php");
 	}
 	?>
-
 	<?php include('function.php'); ?>
-
 	<?php
 	if (isset($_POST["sbmt"])) {
 		$cn = makeconnection();
@@ -49,7 +44,6 @@
 		echo "<script type='text/javascript'>toastr.success('User added! ')</script>";
 	}
 	?>
-
 	<div style="padding-top:200px; box-shadow:1px 1px 20px black; min-height:100vh" class="container">
 		<div style="border-right:1px solid #999; min-height:450px;">
 			<?php include('left.php'); ?>

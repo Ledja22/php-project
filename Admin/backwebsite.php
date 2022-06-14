@@ -1,5 +1,4 @@
 <div class="header-top">
-	<!--container-->
 	<div class="container">
 		<div class="top-nav">
 			<div class="logo">
@@ -12,5 +11,4 @@
 	</div>
 	<div class="clearfix"> </div>
 </div>
-<!--/container-->
 </div>
